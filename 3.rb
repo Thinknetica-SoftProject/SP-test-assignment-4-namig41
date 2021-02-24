@@ -12,10 +12,10 @@
 
 File.open("./data/3.txt", "r") do |file|
   data = file.read.split("\t")
-  ans = 0
+  res = 0
   for row in data do
     arr = row.split(' ')
-    ans += (arr.max.to_i - arr.min.to_i)
+    res += (arr.max.to_i - arr.min.to_i)
   end
-  puts ans
+  puts res
 end

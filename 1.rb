@@ -19,15 +19,16 @@
 
 File.open("./data/1.txt", "r") do |file|
   data = file.read
-  ans = 0
+  res = 0
 
   for i in 0..data.size do
     if (data[i] == "(")
-      ans += 1;
+      res += 1;
     end
     if (data[i] == ")")
-      ans -= 1;
+      res -= 1;
     end
   end
-  puts ans
+
+  puts res
 end
