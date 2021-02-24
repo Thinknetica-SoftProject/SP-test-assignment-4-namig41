@@ -12,6 +12,7 @@
 
 File.open("./data/3.txt", "r") do |file|
   data = file.read.split("\t")
+  puts data[0]
   res = 0
   for row in data do
     arr = row.split(' ')
