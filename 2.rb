@@ -16,3 +16,7 @@
 #
 ## Решение:
 
+hash = gets
+
+
+puts ans 

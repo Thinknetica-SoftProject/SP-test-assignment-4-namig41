@@ -16,4 +16,19 @@
 #
 ## Решение:
 
+File.open("./data/4.txt") do |file|
 
+  res = 0
+  for line in file.readlines()
+
+    arr = line.split('x')
+
+    d = arr[0].to_i
+    w = arr[1].to_i
+    h = arr[2].to_i
+
+    res += 2 * (d * w + w * h + d * h) + arr.max.to_i
+  end
+
+  puts res
+end

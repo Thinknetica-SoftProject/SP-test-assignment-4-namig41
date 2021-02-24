@@ -17,5 +17,17 @@
 ## Решение:
 
 
+File.open("./data/1.txt", "r") do |file|
+  data = file.read
+  ans = 0
 
-
+  for i in 0..data.size do
+    if (data[i] == "(")
+      ans += 1;
+    end
+    if (data[i] == ")")
+      ans -= 1;
+    end
+  end
+  puts ans
+end
