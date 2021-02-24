@@ -11,9 +11,10 @@
 ## Решение:
 
 File.open("./data/3.txt", "r") do |file|
+  data = file.read.split("\t")
   ans = 0
-  for line in file.readlines()
-    arr = line.split()
+  for row in data do
+    arr = row.split(' ')
     ans += (arr.max.to_i - arr.min.to_i)
   end
   puts ans
