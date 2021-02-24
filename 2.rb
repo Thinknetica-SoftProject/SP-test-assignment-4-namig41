@@ -16,10 +16,15 @@
 #
 ## Решение:
 
-require 'digest'
+require 'digest/md5'
 
-hash = gets()
-
-for i in [1..10] do
-  print Digest::MD5.hexdigest(hash)
+hash = gets.chomp
+count = 1
+while 1 do
+  if (Digest::MD5.hexdigest(hash + count.to_s)[0..4] == "00000")
+    puts(count)
+    break
+  else
+    count += 1
+  end
 end
