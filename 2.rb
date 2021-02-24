@@ -16,7 +16,10 @@
 #
 ## Решение:
 
-hash = gets
+require 'digest'
 
+hash = gets()
 
-puts ans 
+for i in [1..10] do
+  print Digest::MD5.hexdigest(hash)
+end

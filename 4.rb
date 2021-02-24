@@ -17,18 +17,13 @@
 ## Решение:
 
 File.open("./data/4.txt") do |file|
-
   res = 0
   for line in file.readlines()
-
     arr = line.split("x").map(&:to_i)
-
     d = arr.min
     w = arr.max
     h = arr.sum - d - w
-
     res += 2 * (d * w + w * h + d * h) + d * h
   end
-
   puts res
 end
